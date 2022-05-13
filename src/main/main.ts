@@ -1,7 +1,17 @@
 import {app, BrowserWindow, ipcMain} from 'electron';
 import {join} from 'path';
 
-function createWindow () {
+export let appStartCalled = false
+
+export const windows: {
+  mainWindow: undefined | BrowserWindow,
+  splash: undefined | BrowserWindow
+} = {
+  mainWindow: undefined,
+  splash: undefined
+}
+
+export function createWindow () {
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,

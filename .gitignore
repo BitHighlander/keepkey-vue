@@ -4,3 +4,6 @@ build
 
 .vscode
 .idea
+
+#bridge tsoa
+src/main/brige/routes/*

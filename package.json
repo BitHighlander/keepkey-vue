@@ -6,6 +6,9 @@
   "scripts": {
     "dev": "node scripts/dev-server.js",
     "build": "node scripts/build.js && electron-builder -c config/electron-builder.json",
+    "build:bridge": "npm build:routes && yarn build:swagger",
+    "build:routes": "tsoa routes --configuration src/main/tsoa.json",
+    "build:swagger": "tsoa swagger --configuration src/main/tsoa.json",
     "build:win": "node scripts/build.js && electron-builder -c config/electron-builder.json --win",
     "build:mac": "node scripts/build.js && electron-builder -c config/electron-builder.json --mac",
     "build:linux": "node scripts/build.js && electron-builder -c config/electron-builder.json --linux"
@@ -26,6 +29,15 @@
     "vite": "^2.8.6"
   },
   "dependencies": {
-    "vue": "^3.2.31"
+    "@keepkey/keepkey-hardware-controller": "^0.0.16",
+    "@shapeshiftoss/hdwallet-core": "^1.22.0",
+    "@shapeshiftoss/hdwallet-keepkey": "^1.22.0",
+    "@shapeshiftoss/hdwallet-keepkey-nodewebusb": "^1.22.0",
+    "electron-log": "^4.4.7",
+    "nedb": "^1.8.0",
+    "swagger-ui-express": "^4.4.0",
+    "tsoa": "^4.0.0",
+    "vue": "^3.2.31",
+    "wait-promise": "^0.4.1"
   }
 }

@@ -1,0 +1,43 @@
+{
+  "entryFile": "./src/main/bridge/index.ts",
+  "host": "localhost:1646",
+  "schemes": [
+    "http",
+    "ws"
+  ],
+  "noImplicitAdditionalProperties": "silently-remove-extras",
+  "basePath": "",
+  "specVersion": 3,
+  "outputDirectory": "./src/main/api/dist",
+  "controllerPathGlobs": [
+    "./src/main/bridge/controllers/**/*controller.ts"
+  ],
+  "spec": {
+    "host": "localhost:1646",
+    "schemes": [
+      "http",
+      "ws"
+    ],
+    "basePath": "",
+    "entryFile": "./src/main/bridge/index.ts",
+    "specVersion": 3,
+    "outputDirectory": "./src/main/api/dist",
+    "controllerPathGlobs": [
+      "./src/main/bridge/controllers/**/*controller.ts"
+    ],
+    "securityDefinitions": {
+      "api_key": {
+        "type": "apiKey",
+        "name": "authorization",
+        "in": "header"
+      }
+    }
+  },
+  "routes": {
+    "basePath": "",
+    "entryFile": "./src/main/bridge/index.ts",
+    "routesDir": "./src/main/bridge/routes",
+    "middleware": "express",
+    "authenticationModule": "./src/main/bridge/auth.ts"
+  }
+}

@@ -5,6 +5,7 @@
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
+    "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "../../build/main",
     "allowJs": true,
