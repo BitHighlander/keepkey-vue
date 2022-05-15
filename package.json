@@ -35,9 +35,12 @@
     "@shapeshiftoss/hdwallet-keepkey-nodewebusb": "^1.22.0",
     "electron-log": "^4.4.7",
     "nedb": "^1.8.0",
+    "sass": "^1.51.0",
     "swagger-ui-express": "^4.4.0",
     "tsoa": "^4.0.0",
     "vue": "^3.2.31",
+    "vue-router": "^4.0.15",
+    "vuex": "^4.0.2",
     "wait-promise": "^0.4.1"
   }
 }

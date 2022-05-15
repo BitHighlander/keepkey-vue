@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Hello from './components/Hello.vue'
+import Main from './components/main.vue'
 import { ipcRenderer } from './electron'
 
 ipcRenderer.send('message', 'Hello from renderer!');
@@ -7,6 +7,6 @@ ipcRenderer.send('message', 'Hello from renderer!');
 
 <template>
   <div id="app">
-    <Hello/>
+    <Main/>
   </div>
 </template>
