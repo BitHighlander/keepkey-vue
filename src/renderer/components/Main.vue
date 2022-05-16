@@ -1,13 +1,8 @@
 <script lang="ts">
 import { computed, defineComponent } from 'vue'
 import { store } from '@/store'
-// import { useStore } from 'vuex'
-//
-// const store = useStore()
-// const stack = computed(() => {
-//   return store.state.stack
-// })
-// console.log(stack)
+import { ipcRenderer } from 'electron'
+
 const msg = 'KeepKey Desktop';
 
 
@@ -15,13 +10,15 @@ export default defineComponent({
   name: 'Home',
   components: {
   },
+  created () {
+  },
   setup() {
     const addTwo = () => store.commit('add', 2)
     const count = computed(() => store.state.count)
-
     return {
       addTwo,
       count,
+      msg
     }
   },
 })
